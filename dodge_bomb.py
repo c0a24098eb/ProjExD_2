@@ -29,8 +29,9 @@ def check_bound(rct: pg.Rect) -> tuple[bool, bool]:
     return yoko, tate
 
 def gameover(screen: pg.Surface) -> None:
-    """ゲームオーバー時に,半透明の黒い画面上に「Game Over」と表
-示し，泣いているこうかとん画像を貼り付ける関数
+    """
+    ゲームオーバー時に,半透明の黒い画面上に「Game Over」と表示し，
+    泣いているこうかとん画像を貼り付ける関数
     """
     #ブラックアウト画面初期化
     blkout_img = pg.Surface((WIDTH, HEIGHT))
@@ -49,8 +50,8 @@ def gameover(screen: pg.Surface) -> None:
     time.sleep(5)
     
 def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
-    """サイズの異なる爆弾Surfaceを要素としたリストと加速度リスト
-を返す
+    """
+    サイズの異なる爆弾Surfaceを要素としたリストと加速度リストを返す
     """
     bb_accs = [a for a in range(1, 11)]
     for r in range(1, 11):
